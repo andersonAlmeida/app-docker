@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  app:
+    build: ./ # localização do dockerfile
+    command: npm start # comando que deve ser executado para rodar a aplicação
+    ports:
+      - "8080:8080" # redirecionamento de portas
+    volumes:
+      - .:/usr/app # diretório que deve ser observado : diretório para onde as mudanças devem ser copiadas
